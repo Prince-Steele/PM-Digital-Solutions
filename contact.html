@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | PM Digital Solutions</title>
+  <meta name="description" content="Get in touch with PM Digital Solutions to discuss your website project.">
+  <script>
+    (() => {
+      const themeStorageKey = "theme";
+      let theme = "dark";
+
+      try {
+        const storedTheme = window.localStorage.getItem(themeStorageKey);
+        if (storedTheme === "light" || storedTheme === "dark") {
+          theme = storedTheme;
+        } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          theme = "light";
+        }
+      } catch {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          theme = "light";
+        }
+      }
+
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
+        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a class="is-active" href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb">
+              <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+              <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            </span>
+          </span>
+          <span class="theme-toggle-label" data-theme-label aria-hidden="true"></span>
+        </button>
+        <a class="button button-primary nav-cta" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Contact</p>
+        <h1>Let's work together on your next website</h1>
+        <p>If you have a project in mind or need a website, feel free to reach out. I'd be happy to hear about what you're building.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="contact-panel">
+          <p class="eyebrow">Reach Out Directly</p>
+          <h2>You can contact me directly via email or WhatsApp</h2>
+          <p>I've made it simple to connect, whether you're ready to start right away or just want to ask a few questions first.</p>
+          <div class="contact-list">
+            <a href="mailto:princesteele23@gamil.com">
+              <i data-lucide="mail"></i>
+              <span>Email</span>
+              <strong>princesteele23@gamil.com</strong>
+            </a>
+            <a href="https://wa.me/18768205761" data-whatsapp-link target="_blank" rel="noopener noreferrer">
+              <i data-lucide="message-circle"></i>
+              <span>Contact via WhatsApp</span>
+              <strong>(876) 820-5761</strong>
+            </a>
+            <div>
+              <i data-lucide="map-pin"></i>
+              <span>Location</span>
+              <strong>St. Catherine, Jamaica</strong>
+            </div>
+          </div>
+          <p class="fine-print">The WhatsApp button can generate a ready-to-send message based on the selected service or project and the details entered in the form.</p>
+        </div>
+
+        <form class="contact-form" data-contact-form>
+          <p class="selection-note" data-selection-note hidden></p>
+          <input type="hidden" name="selected-item" data-selected-item>
+          <input type="hidden" name="selected-type" data-selected-type>
+          <div class="field-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Your email" required>
+            </label>
+          </div>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="8" placeholder="Tell me about your project" required></textarea>
+          </label>
+          <div class="contact-actions">
+            <button class="button button-primary" type="submit" data-submit-button>Send via Email</button>
+            <a class="button button-secondary" href="https://wa.me/18768205761" data-whatsapp-link target="_blank" rel="noopener noreferrer">Send via WhatsApp</a>
+          </div>
+          <p class="form-status" data-form-status aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+        </a>
+        <p>Clean, modern web solutions built to help businesses stand out and grow online.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:princesteele23@gamil.com">princesteele23@gamil.com</a>
+        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>St. Catherine, Jamaica</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> PM Digital Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>

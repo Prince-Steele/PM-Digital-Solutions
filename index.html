@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM Digital Solutions | Websites That Grow Your Business</title>
+  <meta name="description" content="PM Digital Solutions builds clean, modern, responsive websites for businesses that want to attract customers and grow online.">
+  <script>
+    (() => {
+      const themeStorageKey = "theme";
+      let theme = "dark";
+
+      try {
+        const storedTheme = window.localStorage.getItem(themeStorageKey);
+        if (storedTheme === "light" || storedTheme === "dark") {
+          theme = storedTheme;
+        } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          theme = "light";
+        }
+      } catch {
+        if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) {
+          theme = "light";
+        }
+      }
+
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
+        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a class="is-active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb">
+              <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+              <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+            </span>
+          </span>
+          <span class="theme-toggle-label" data-theme-label aria-hidden="true"></span>
+        </button>
+        <a class="button button-primary nav-cta" href="contact.html">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Web Design & Development</p>
+          <h1>I Build Websites That Grow Your Business</h1>
+          <p class="lead">
+            Clean, modern, and responsive websites designed to help businesses attract customers and build credibility online.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="portfolio.html">View My Work</a>
+            <a class="button button-secondary" href="contact.html">Get a Quote</a>
+          </div>
+          <ul class="hero-trust">
+            <li>Responsive across mobile, tablet, and desktop</li>
+            <li>Built for speed, credibility, and clarity</li>
+            <li>Support available after launch</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card hero-card-main">
+            <p class="mini-label">Featured service</p>
+            <h2>Professional websites tailored to your goals.</h2>
+            <p>I help businesses and individuals bring their ideas to life with clean, fast, and professional websites tailored to their goals.</p>
+            <div class="hero-badges">
+              <span><i data-lucide="sparkles"></i> Clean UI</span>
+              <span><i data-lucide="zap"></i> Fast builds</span>
+            </div>
+          </div>
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <div class="metric-icon"><i data-lucide="pen-tool"></i></div>
+              <strong>Custom</strong>
+              <span>Website design tailored to your brand</span>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon"><i data-lucide="gauge"></i></div>
+              <strong>Fast</strong>
+              <span>Performance-focused builds and clean structure</span>
+            </article>
+            <article class="metric-card">
+              <div class="metric-icon"><i data-lucide="shield-check"></i></div>
+              <strong>Reliable</strong>
+              <span>Ongoing support and practical updates</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">What I Do</p>
+          <h2>Web solutions with a business-first mindset</h2>
+          <p>I help businesses and individuals bring their ideas to life with clean, fast, and professional websites tailored to their goals.</p>
+        </div>
+        <div class="card-grid four-up">
+          <article class="feature-card">
+            <div class="icon-badge"><i data-lucide="palette"></i></div>
+            <h3>Custom Website Design</h3>
+            <p>Layouts and visuals shaped around your brand, audience, and message.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-badge"><i data-lucide="smartphone"></i></div>
+            <h3>Responsive Experiences</h3>
+            <p>Mobile-friendly pages that stay polished across every screen size.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-badge"><i data-lucide="gauge"></i></div>
+            <h3>Performance-Focused Builds</h3>
+            <p>Streamlined front-end code that supports speed, usability, and trust.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon-badge"><i data-lucide="life-buoy"></i></div>
+            <h3>Ongoing Support</h3>
+            <p>Post-launch help for updates, refinements, and continuous improvement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-vibrant">
+      <div class="container">
+        <div class="section-heading center">
+          <p class="eyebrow">How I Add Value</p>
+          <h2>More than a website. A sharper digital presence for your business.</h2>
+          <p>Every project is built to look strong, communicate clearly, and support the next step you want your visitors to take.</p>
+        </div>
+        <div class="card-grid three-up spotlight-grid">
+          <article class="spotlight-card">
+            <div class="icon-badge accent"><i data-lucide="target"></i></div>
+            <h3>Clear positioning</h3>
+            <p>I help shape pages around your real offer so visitors understand who you help, what you do, and why they should trust you.</p>
+          </article>
+          <article class="spotlight-card">
+            <div class="icon-badge accent"><i data-lucide="code-xml"></i></div>
+            <h3>Modern development</h3>
+            <p>From landing pages to full product interfaces, I build experiences that feel current, smooth, and ready to grow.</p>
+          </article>
+          <article class="spotlight-card">
+            <div class="icon-badge accent"><i data-lucide="rocket"></i></div>
+            <h3>Launch support</h3>
+            <p>I can help with updates, polish, and practical improvements so your site keeps working for your business after launch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container split-panel">
+        <div>
+          <p class="eyebrow">Why Clients Choose PM Digital</p>
+          <h2>Clean design, clear communication, dependable delivery</h2>
+        </div>
+        <div class="value-list">
+          <article>
+            <h3>Strategy first</h3>
+            <p>Every build starts with your goals, audience, and the action you want visitors to take.</p>
+          </article>
+          <article>
+            <h3>Built with purpose</h3>
+            <p>From structure to spacing, every section is designed to support clarity and conversion.</p>
+          </article>
+          <article>
+            <h3>Made to last</h3>
+            <p>You get a solid foundation that can be improved, expanded, and maintained over time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container tech-panel">
+        <div>
+          <p class="eyebrow">Working Stack</p>
+          <h2>Tools I use to build reliable digital products</h2>
+          <p>Depending on the project, I work across modern front-end frameworks, backend services, and deployment-ready workflows.</p>
+        </div>
+        <div class="tech-pills">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Angular</span>
+          <span>TypeScript</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>SQL</span>
+          <span>Supabase</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Quick Portfolio Preview</p>
+          <h2>Selected projects and concept builds</h2>
+          <p>A few examples that reflect my approach to modern product design, development, and real business use cases.</p>
+        </div>
+        <div class="card-grid project-preview-grid">
+          <article class="project-card">
+            <img class="project-thumb" src="assets/image/carewiseproject.png" alt="CareWise Health Platform preview">
+            <span class="project-tag">Healthcare</span>
+            <h3>CareWise Health Platform</h3>
+            <p>Secure healthcare workflows, communication, and appointments in one Angular-based platform.</p>
+            <a href="https://carewise-ivory.vercel.app/" target="_blank" rel="noopener noreferrer">View Live Site</a>
+          </article>
+          <article class="project-card">
+            <img class="project-thumb" src="assets/image/Cropwiseproject.png" alt="CropWise platform preview">
+            <span class="project-tag">AI & Agriculture</span>
+            <h3>CropWise</h3>
+            <p>AI-powered crop recommendations, yield predictions, and weather insights for farmers.</p>
+            <a href="https://cropwise-ai-six.vercel.app/" target="_blank" rel="noopener noreferrer">View Live Site</a>
+          </article>
+          <article class="project-card">
+            <img class="project-thumb" src="assets/image/OptiHome.png" alt="OptiHome.AI brand preview">
+            <span class="project-tag">Upcoming</span>
+            <h3>OptiHome.AI</h3>
+            <p>A smart home energy platform focused on electricity usage insights and savings recommendations.</p>
+            <a href="contact.html?type=project&amp;selected=OptiHome.AI">Ask About This Project</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-panel">
+        <div>
+          <p class="eyebrow">Ready To Build Your Website?</p>
+          <h2>Let's create something professional, modern, and built for your growth.</h2>
+        </div>
+        <a class="button button-primary" href="contact.html">Contact Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+        </a>
+        <p>Clean, modern web solutions built to help businesses stand out and grow online.</p>
+      </div>
+      <div>
+        <h3>Pages</h3>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <a href="mailto:princesteele23@gamil.com">princesteele23@gamil.com</a>
+        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <span>St. Catherine, Jamaica</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> PM Digital Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
