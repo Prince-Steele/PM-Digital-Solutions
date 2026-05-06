@@ -92,24 +92,29 @@ const buildWhatsappMessage = () => {
   const lines = [
     "Hello Prince-Mark,",
     "",
-    `My name is ${name}.`,
+    `My name is ${name}, and I would like to inquire about your web development services.`,
   ];
 
   if (selectedItem) {
-    const label = selectedType === "project" ? "project" : "package";
-    lines.push(`I am interested in the ${label}: ${selectedItem}.`);
+    if (selectedType === "project") {
+      lines.push(`I am reaching out about the project: ${selectedItem}.`);
+    } else {
+      lines.push(`I am interested in your ${selectedItem} offering.`);
+    }
   } else {
     lines.push("I am interested in working with you on a website project.");
   }
 
   if (email) {
-    lines.push(`You can reply to me at: ${email}.`);
+    lines.push(`My email address is ${email}.`);
   }
 
   if (message) {
-    lines.push("", "Project details:");
+    lines.push("", "A few details about what I need:");
     lines.push(message);
   }
+
+  lines.push("", "Looking forward to hearing from you. Thank you.");
 
   return lines.join("\n");
 };

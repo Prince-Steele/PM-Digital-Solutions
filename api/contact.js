@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "princesteele23@gamil.com";
+const CONTACT_EMAIL = "princesteele23@gmail.com";
 
 function buildHtml({ name, email, message, selectedItem, selectedType }) {
   const selectionLabel = selectedItem
