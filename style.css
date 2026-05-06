@@ -712,8 +712,7 @@ textarea {
 
 .icon-badge,
 .process-card span,
-.project-tag,
-.pricing-tier {
+.project-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -883,12 +882,43 @@ textarea {
   font-weight: 700;
 }
 
-.project-tag,
-.pricing-tier {
+.project-tag {
   padding: 0.45rem 0.8rem;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
   margin-bottom: 1rem;
+}
+
+.pricing-tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.95rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  background: transparent;
+  position: relative;
+}
+
+.pricing-tier::after {
+  content: "";
+  width: 34px;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(29, 114, 255, 0.95), rgba(25, 194, 201, 0.45));
+  box-shadow: 0 0 14px rgba(74, 164, 255, 0.18);
+}
+
+.featured-tier .pricing-tier {
+  color: #0c54d4;
+  text-shadow: 0 0 18px rgba(74, 164, 255, 0.16);
+}
+
+.featured-tier .pricing-tier::after {
+  background: linear-gradient(90deg, rgba(29, 114, 255, 1), rgba(25, 194, 201, 0.72));
 }
 
 .project-card a,
@@ -1709,9 +1739,7 @@ textarea {
   }
 
   .pricing-tier {
-    max-width: 100%;
-    white-space: normal;
-    text-align: center;
+    white-space: nowrap;
   }
 
   /* Contact page mobile */
