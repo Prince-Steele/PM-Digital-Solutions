@@ -350,6 +350,22 @@ textarea {
   transform: translateY(-2px);
 }
 
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-right: 0.55rem;
+  flex-shrink: 0;
+}
+
+.button-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .button-primary {
   background: linear-gradient(135deg, var(--ink) 0%, var(--accent) 52%, var(--accent-bright) 78%, var(--accent-aqua) 100%);
   color: #fff;
@@ -372,6 +388,47 @@ textarea {
   color: var(--accent-deep);
   border-color: rgba(29, 114, 255, 0.34);
   box-shadow: 0 16px 32px rgba(74, 164, 255, 0.18);
+}
+
+.button-whatsapp {
+  position: relative;
+  overflow: visible;
+}
+
+.button-whatsapp .button-icon {
+  color: #1fa855;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.button-whatsapp:hover {
+  background: linear-gradient(135deg, #e7fff0, #f4fff8);
+  color: #0d6f38;
+  border-color: rgba(31, 168, 85, 0.4);
+  box-shadow: 0 16px 32px rgba(31, 168, 85, 0.18);
+}
+
+.button-whatsapp:hover .button-icon {
+  color: #119c4a;
+  transform: scale(1.08);
+}
+
+.button-whatsapp.is-sparking .button-icon {
+  transform: scale(0.94);
+}
+
+.whatsapp-spark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(88, 255, 143, 0.95) 0%, rgba(25, 180, 85, 0.82) 55%, rgba(25, 180, 85, 0) 100%);
+  pointer-events: none;
+  transform: rotate(var(--spark-angle)) translateY(-6px);
+  animation: whatsappSpark 620ms ease-out forwards;
 }
 
 .full-width {
@@ -1395,6 +1452,20 @@ textarea {
   }
   50% {
     transform: translateY(8px);
+  }
+}
+
+@keyframes whatsappSpark {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--spark-angle)) translateY(-6px) scale(0.45);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--spark-angle)) translateY(-34px) scale(1.15);
   }
 }
 

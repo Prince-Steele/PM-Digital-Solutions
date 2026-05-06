@@ -89,32 +89,33 @@ const buildWhatsappMessage = () => {
   const name = nameField?.value.trim() || "there";
   const email = emailField?.value.trim();
   const message = messageField?.value.trim();
-  const lines = [
-    "Hello Prince-Mark,",
-    "",
-    `My name is ${name}, and I would like to inquire about your web development services.`,
-  ];
+  const lines = ["Hello Prince-Mark,", ""];
 
   if (selectedItem) {
     if (selectedType === "project") {
-      lines.push(`I am reaching out about the project: ${selectedItem}.`);
+      lines.push(`I'm interested in your ${selectedItem} project.`);
     } else {
-      lines.push(`I am interested in your ${selectedItem} offering.`);
+      const packageName = selectedItem.replace(/\s+package$/i, "");
+      lines.push(`I'm interested in your ${packageName} website package.`);
     }
   } else {
-    lines.push("I am interested in working with you on a website project.");
+    lines.push("I'm interested in working with you on a website project.");
   }
+
+  lines.push("I'd like to get started and learn more about the next steps.");
 
   if (email) {
     lines.push(`My email address is ${email}.`);
   }
 
   if (message) {
-    lines.push("", "A few details about what I need:");
+    lines.push("", "A few details about what I'm looking for:");
     lines.push(message);
+  } else {
+    lines.push("I can also share a few details about what I'm looking for if needed.");
   }
 
-  lines.push("", "Looking forward to hearing from you. Thank you.");
+  lines.push("", "Looking forward to your response, thank you.");
 
   return lines.join("\n");
 };
@@ -156,6 +157,35 @@ if (messageField) {
 }
 
 syncWhatsappLinks();
+
+const triggerWhatsappSpark = (button) => {
+  if (!button) {
+    return;
+  }
+
+  button.classList.add("is-sparking");
+
+  for (let index = 0; index < 8; index += 1) {
+    const spark = document.createElement("span");
+    spark.className = "whatsapp-spark";
+    spark.style.setProperty("--spark-angle", `${index * 45}deg`);
+    button.appendChild(spark);
+
+    window.setTimeout(() => {
+      spark.remove();
+    }, 650);
+  }
+
+  window.setTimeout(() => {
+    button.classList.remove("is-sparking");
+  }, 320);
+};
+
+whatsappLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    triggerWhatsappSpark(link);
+  });
+});
 
 const contactForm = document.querySelector("[data-contact-form]");
 const submitButton = document.querySelector("[data-submit-button]");
