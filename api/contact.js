@@ -57,10 +57,23 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
         .email-gap { display: none !important; }
         .email-badge-wrap { text-align: left !important; padding-top: 14px !important; }
         .email-panel { margin-bottom: 14px !important; }
-        .email-message-box { font-size: 14px !important; line-height: 1.72 !important; }
+        .email-message-box {
+          padding: 16px 14px !important;
+          font-size: 14px !important;
+          line-height: 1.72 !important;
+        }
         .email-footer-copy { margin-bottom: 14px !important; }
-        .email-reply-align { text-align: left !important; }
-        .email-reply-button { margin-top: 6px !important; }
+        .email-reply-align {
+          text-align: left !important;
+          padding-top: 6px !important;
+        }
+        .email-reply-button {
+          display: block !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+          margin-top: 6px !important;
+          text-align: center !important;
+        }
       }
     </style>
     <div class="email-shell" style="margin:0; padding:36px 16px; background:#edf3f9; font-family:Arial, Helvetica, sans-serif; color:#16324d;">
@@ -105,9 +118,9 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
                   <div class="email-panel" style="padding:20px 20px 18px; background:#f8fbfe; border:1px solid #dbe7f2; border-radius:20px;">
                     <p style="margin:0 0 14px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#62809d;">Contact details</p>
                     <p style="margin:0 0 12px; font-size:15px; line-height:1.6; color:#16324d;"><strong style="color:#102739;">Name</strong><br>${safeName}</p>
-                    <p style="margin:0 0 12px; font-size:15px; line-height:1.6; color:#16324d;"><strong style="color:#102739;">Email</strong><br><a href="mailto:${safeEmail}" style="color:#0c54d4; text-decoration:none;">${safeEmail}</a></p>
+                    <p style="margin:0 0 12px; font-size:15px; line-height:1.6; color:#16324d; overflow-wrap:anywhere; word-break:break-word;"><strong style="color:#102739;">Email</strong><br><a href="mailto:${safeEmail}" style="color:#0c54d4; text-decoration:none; overflow-wrap:anywhere; word-break:break-word;">${safeEmail}</a></p>
                     ${selectedItem ? `
-                    <p style="margin:0 0 12px; font-size:15px; line-height:1.6; color:#16324d;"><strong style="color:#102739;">${selectionLabel}</strong><br>${safeSelection}</p>` : ""}
+                    <p style="margin:0 0 12px; font-size:15px; line-height:1.6; color:#16324d; overflow-wrap:anywhere; word-break:break-word;"><strong style="color:#102739;">${selectionLabel}</strong><br>${safeSelection}</p>` : ""}
                     <p style="margin:0; font-size:15px; line-height:1.6; color:#16324d;"><strong style="color:#102739;">Submitted</strong><br>${submittedAt}</p>
                   </div>
                 </td>
@@ -115,7 +128,7 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
                 <td style="vertical-align:top;">
                   <div class="email-panel" style="padding:20px 22px; background:#ffffff; border:1px solid #dbe7f2; border-radius:20px;">
                     <p style="margin:0 0 14px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#62809d;">Message</p>
-                    <div class="email-message-box" style="padding:18px; background:#f9fcff; border-left:4px solid #1d72ff; border-radius:14px; font-size:15px; line-height:1.8; color:#16324d;">
+                    <div class="email-message-box" style="padding:18px; background:#f9fcff; border-left:4px solid #1d72ff; border-radius:14px; font-size:15px; line-height:1.8; color:#16324d; white-space:pre-wrap; overflow-wrap:anywhere; word-break:break-word;">
                       ${safeMessage}
                     </div>
                   </div>
