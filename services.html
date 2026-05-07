@@ -37,7 +37,16 @@
   <header class="site-header">
     <div class="container nav-shell">
       <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
-        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-ring"></span>
+          <span class="brand-core">
+            <span class="brand-glyph"></span>
+          </span>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">PM Digital Solutions</span>
+          <span class="brand-role">Web Design &amp; Development</span>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
@@ -72,23 +81,22 @@
       </div>
     </section>
 
-    <section class="section section-vibrant service-overview">
-          <div class="container card-grid three-up spotlight-grid">
-        <article class="spotlight-card">
-          <div class="icon-badge accent"><i data-lucide="briefcase"></i></div>
-          <h3>Built for service brands</h3>
-          <p>Perfect for professionals, agencies, small businesses, and founders who need a stronger web presence.</p>
-        </article>
-        <article class="spotlight-card">
-          <div class="icon-badge accent"><i data-lucide="layout-dashboard"></i></div>
-          <h3>Flexible project scope</h3>
-          <p>From polished marketing sites to custom dashboards and portals, each package can expand around your goals.</p>
-        </article>
-        <article class="spotlight-card">
-          <div class="icon-badge accent"><i data-lucide="message-square"></i></div>
-          <h3>Guided collaboration</h3>
-          <p>You get clear communication, staged feedback, and a process that keeps the build moving with confidence.</p>
-        </article>
+    <section class="section service-overview-strip">
+      <div class="container">
+        <div class="service-signals">
+          <article class="service-signal">
+            <p class="service-signal-title">Built for service brands</p>
+            <p>Professionals, agencies, small businesses, and founders who need a stronger web presence.</p>
+          </article>
+          <article class="service-signal">
+            <p class="service-signal-title">Flexible project scope</p>
+            <p>From polished marketing sites to custom dashboards and portals, each package can expand around your goals.</p>
+          </article>
+          <article class="service-signal">
+            <p class="service-signal-title">Guided collaboration</p>
+            <p>Clear communication, thoughtful feedback, and a process that keeps the build moving with confidence.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -199,28 +207,42 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container note-panel-grid">
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="server"></i></div>
-          <h3>Domain & Hosting</h3>
-          <p>Domain and hosting are not included in website packages unless arranged separately.</p>
-        </article>
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="receipt"></i></div>
-          <h3>Payment Terms</h3>
-          <p>A 50% deposit is required to begin. The remaining balance is due before final delivery or launch.</p>
-        </article>
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="clock-3"></i></div>
-          <h3>Timelines</h3>
-          <p>Delivery timelines vary depending on project scope, revisions, and client responsiveness.</p>
-        </article>
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="info"></i></div>
-          <h3>Final Note</h3>
-          <p>Final pricing may vary depending on features, integrations, and overall project complexity.</p>
-        </article>
+    <section class="section service-policies-section">
+      <div class="container service-policies">
+        <div class="section-heading">
+          <p class="eyebrow">Important Details</p>
+          <h2>Helpful notes before you get started</h2>
+        </div>
+        <div class="service-policy-list">
+          <article class="service-policy">
+            <div class="service-policy-key">
+              <i data-lucide="server"></i>
+              <h3>Domain & Hosting</h3>
+            </div>
+            <p>Domain and hosting are not included in website packages unless arranged separately.</p>
+          </article>
+          <article class="service-policy">
+            <div class="service-policy-key">
+              <i data-lucide="receipt"></i>
+              <h3>Payment Terms</h3>
+            </div>
+            <p>A 50% deposit is required to begin. The remaining balance is due before final delivery or launch.</p>
+          </article>
+          <article class="service-policy">
+            <div class="service-policy-key">
+              <i data-lucide="clock-3"></i>
+              <h3>Timelines</h3>
+            </div>
+            <p>Delivery timelines vary depending on project scope, revisions, and client responsiveness.</p>
+          </article>
+          <article class="service-policy">
+            <div class="service-policy-key">
+              <i data-lucide="info"></i>
+              <h3>Final Note</h3>
+            </div>
+            <p>Final pricing may vary depending on features, integrations, and overall project complexity.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
