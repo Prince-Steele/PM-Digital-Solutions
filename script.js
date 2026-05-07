@@ -78,6 +78,7 @@ const queryParams = new URLSearchParams(window.location.search);
 const selectedType = queryParams.get("type");
 const selectedItem = queryParams.get("selected");
 const selectionNote = document.querySelector("[data-selection-note]");
+const whatsappHelper = document.querySelector("[data-whatsapp-helper]");
 const selectedInput = document.querySelector("[data-selected-item]");
 const selectedTypeInput = document.querySelector("[data-selected-type]");
 const messageField = document.querySelector('textarea[name="message"]');
@@ -127,6 +128,20 @@ const syncWhatsappLinks = () => {
   });
 };
 
+const updateWhatsappHelper = () => {
+  if (!whatsappHelper) {
+    return;
+  }
+
+  if (selectedItem) {
+    const label = selectedType === "project" ? "project" : "package";
+    whatsappHelper.textContent = `WhatsApp will open a ready-to-send message with your selected ${label} and any details you add to the form.`;
+    return;
+  }
+
+  whatsappHelper.textContent = "WhatsApp can open a ready-to-send message using your form details.";
+};
+
 if (selectionNote && selectedInput && selectedItem) {
   const label = selectedType === "project" ? "Selected project" : "Selected package";
   selectionNote.hidden = false;
@@ -137,6 +152,8 @@ if (selectionNote && selectedInput && selectedItem) {
   }
 
 }
+
+updateWhatsappHelper();
 
 if (nameField) {
   nameField.addEventListener("input", syncWhatsappLinks);
