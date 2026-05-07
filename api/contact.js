@@ -45,7 +45,6 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
         .email-summary { font-size: 14px !important; }
         .email-stack,
         .email-stack tbody,
-        .email-stack tr,
         .email-stack td,
         .email-reply-table,
         .email-reply-table tbody,
@@ -54,6 +53,13 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
           display: block !important;
           width: 100% !important;
         }
+        .email-stack tr {
+          display: flex !important;
+          flex-direction: column !important;
+          width: 100% !important;
+        }
+        .email-details-cell { order: 1 !important; }
+        .email-message-cell { order: 2 !important; margin-top: 14px !important; }
         .email-gap { display: none !important; }
         .email-badge-wrap { text-align: left !important; padding-top: 14px !important; }
         .email-panel { margin-bottom: 14px !important; }
@@ -114,7 +120,7 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
           <div class="email-body" style="padding:0 32px 32px;">
             <table class="email-stack" role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate; border-spacing:0 16px;">
               <tr>
-                <td style="width:42%; vertical-align:top;">
+                <td class="email-details-cell" style="width:42%; vertical-align:top;">
                   <div class="email-panel" style="padding:20px 20px 18px; background:#f8fbfe; border:1px solid #dbe7f2; border-radius:20px;">
                     <p style="margin:0 0 14px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#62809d;">Contact details</p>
                     <p style="margin:0 0 12px; font-size:15px; line-height:1.6; color:#16324d;"><strong style="color:#102739;">Name</strong><br>${safeName}</p>
@@ -125,7 +131,7 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
                   </div>
                 </td>
                 <td class="email-gap" style="width:16px;"></td>
-                <td style="vertical-align:top;">
+                <td class="email-message-cell" style="vertical-align:top;">
                   <div class="email-panel" style="padding:20px 22px; background:#ffffff; border:1px solid #dbe7f2; border-radius:20px;">
                     <p style="margin:0 0 14px; font-size:12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#62809d;">Message</p>
                     <div class="email-message-box" style="padding:18px; background:#f9fcff; border-left:4px solid #1d72ff; border-radius:14px; font-size:15px; line-height:1.8; color:#16324d; white-space:pre-wrap; overflow-wrap:anywhere; word-break:break-word;">
