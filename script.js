@@ -136,12 +136,6 @@ if (selectionNote && selectedInput && selectedItem) {
     selectedTypeInput.value = selectedType || "";
   }
 
-  if (messageField && !messageField.value.trim()) {
-    const intro = selectedType === "project"
-      ? `I'm interested in a website inspired by the ${selectedItem}.`
-      : `I'm interested in the ${selectedItem}.`;
-    messageField.value = `${intro}\n\nPlease tell me the next steps.`;
-  }
 }
 
 if (nameField) {
@@ -249,12 +243,6 @@ if (contactForm) {
       }
       if (selectionNote && selectedItem) {
         selectionNote.hidden = false;
-      }
-      if (messageField && selectedItem) {
-        const intro = selectedType === "project"
-          ? `I'm interested in a website inspired by the ${selectedItem}.`
-          : `I'm interested in the ${selectedItem}.`;
-        messageField.value = `${intro}\n\nPlease tell me the next steps.`;
       }
       syncWhatsappLinks();
 
