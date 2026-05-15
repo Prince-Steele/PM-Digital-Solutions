@@ -30,55 +30,69 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
-        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+<body class="inner-page contact-page">
+  <header class="site-header home-site-header">
+    <div class="container nav-shell home-nav-shell shared-nav-shell">
+      <a class="brand brand--visual" href="index.html" aria-label="PM Digital Solutions home">
+        <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+        <span class="site-brand-copy">
+          <span class="site-brand-name">PM DIGITAL</span>
+          <span class="site-brand-role">SOLUTIONS</span>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="nav-toggle home-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" id="site-nav">
+      <nav class="site-nav home-site-nav" id="site-nav">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a class="is-active" href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb">
-              <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-              <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-            </span>
-          </span>
-          <span class="theme-toggle-label" data-theme-label aria-hidden="true"></span>
-        </button>
-        <a class="button button-primary nav-cta" href="contact.html">Get a Quote</a>
+        <a class="button button-primary nav-cta home-nav-cta" href="contact.html">
+          <span>Let's Work Together</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">Contact</p>
-        <h1>Let's work together on your next website</h1>
-        <p>If you have a project in mind or need a website, feel free to reach out. I'd be happy to hear about what you're building.</p>
+  <main class="inner-main">
+    <section class="inner-hero">
+      <div class="container inner-hero-shell">
+        <div class="inner-hero-copy">
+          <p class="eyebrow">Contact</p>
+          <h1>Let's build a website that moves your business forward.</h1>
+          <p>If you have a project in mind, need a quote or just want to ask a few questions, I'd be happy to hear what you're building.</p>
+        </div>
+        <div class="inner-hero-panel">
+          <article class="inner-stat-card">
+            <strong>Quick replies</strong>
+            <span>Reach out by email or WhatsApp and I'll respond as soon as possible.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Guided next steps</strong>
+            <span>I can help you figure out the right package, scope and direction.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Project clarity</strong>
+            <span>Share your goals and I'll help map the best way forward.</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container contact-layout">
-        <div class="contact-panel">
+    <section class="inner-section">
+      <div class="container contact-showcase-layout">
+        <div class="contact-showcase-panel">
           <p class="eyebrow">Reach Out Directly</p>
-          <h2>You can contact me directly via email or WhatsApp</h2>
+          <h2>You can contact me directly via email or WhatsApp.</h2>
           <p>I've made it simple to connect, whether you're ready to start right away or just want to ask a few questions first.</p>
-          <div class="contact-list">
+          <div class="contact-list contact-list--showcase">
             <a href="mailto:princesteele23@gmail.com">
               <i data-lucide="mail"></i>
               <span>Email</span>
@@ -98,7 +112,7 @@
           <p class="fine-print">The WhatsApp button can generate a ready-to-send message based on the selected service or project and the details entered in the form.</p>
         </div>
 
-        <form class="contact-form" data-contact-form>
+        <form class="contact-form contact-form--showcase" data-contact-form>
           <p class="selection-note" data-selection-note hidden></p>
           <input type="hidden" name="selected-item" data-selected-item>
           <input type="hidden" name="selected-type" data-selected-type>
@@ -134,29 +148,42 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+  <footer class="site-footer home-footer">
+    <div class="container home-footer-grid">
+      <div class="home-footer-brand-block">
+        <a class="brand brand--visual footer-brand" href="index.html" aria-label="PM Digital Solutions home">
+          <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+          <span class="site-brand-copy">
+            <span class="site-brand-name">PM DIGITAL</span>
+            <span class="site-brand-role">SOLUTIONS</span>
+          </span>
         </a>
-        <p>Clean, modern web solutions built to help businesses stand out and grow online.</p>
+        <p>Building digital experiences that drive real growth and measurable results.</p>
       </div>
-      <div>
-        <h3>Pages</h3>
-        <a href="about.html">About</a>
+      <div class="home-footer-column">
+        <h3>Let's Connect</h3>
+        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">(876) 820-5761</a>
+        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
+        <a href="https://pm-digital-solutions.vercel.app" target="_blank" rel="noopener noreferrer">pm-digital-solutions.vercel.app</a>
+      </div>
+      <div class="home-footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
-        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <span>St. Catherine, Jamaica</span>
+      <div class="home-footer-column home-footer-cta">
+        <h3>Let's Work Together</h3>
+        <p>Have a project in mind? Let's create something amazing together.</p>
+        <a class="button button-primary home-footer-button" href="contact.html">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
     </div>
-    <div class="container footer-bottom">
+    <div class="container footer-bottom home-footer-bottom">
       <p>&copy; <span id="year"></span> PM Digital Solutions. All rights reserved.</p>
     </div>
   </footer>

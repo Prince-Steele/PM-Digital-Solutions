@@ -30,140 +30,265 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
-        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+<body class="inner-page portfolio-page">
+  <header class="site-header home-site-header">
+    <div class="container nav-shell home-nav-shell shared-nav-shell">
+      <a class="brand brand--visual" href="index.html" aria-label="PM Digital Solutions home">
+        <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+        <span class="site-brand-copy">
+          <span class="site-brand-name">PM DIGITAL</span>
+          <span class="site-brand-role">SOLUTIONS</span>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="nav-toggle home-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" id="site-nav">
+      <nav class="site-nav home-site-nav" id="site-nav">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a class="is-active" href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb">
-              <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-              <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-            </span>
-          </span>
-          <span class="theme-toggle-label" data-theme-label aria-hidden="true"></span>
-        </button>
-        <a class="button button-primary nav-cta" href="contact.html">Get a Quote</a>
+        <a class="button button-primary nav-cta home-nav-cta" href="contact.html">
+          <span>Let's Work Together</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">Portfolio</p>
-        <h1>Projects that showcase design, development, and problem-solving</h1>
-        <p>Here are some projects I've worked on, showcasing how I approach product design, development, backend workflows, and user-focused interfaces.</p>
+  <main class="inner-main">
+    <section class="inner-hero">
+      <div class="container inner-hero-shell">
+        <div class="inner-hero-copy">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Projects that blend strong visuals with practical functionality.</h1>
+          <p>These selected projects reflect how I approach interfaces, development workflows and real-world business needs, while keeping clarity and performance front and center.</p>
+        </div>
+        <div class="inner-hero-panel">
+          <article class="inner-stat-card">
+            <strong>Frontend Focus</strong>
+            <span>Clean interfaces designed for usability and trust.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>System Thinking</strong>
+            <span>Projects shaped around real workflows and user journeys.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Scalable Builds</strong>
+            <span>Ready for expansion, integrations and ongoing support.</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container portfolio-grid">
-        <article class="portfolio-entry">
-          <div class="portfolio-media">
-            <img class="portfolio-image" src="assets/image/carewiseproject.png" alt="CareWise Health Platform interface preview">
-          </div>
-          <div class="portfolio-copy">
-            <p class="project-tag">Healthcare Platform</p>
-            <h2>CareWise Health Platform</h2>
-            <p>Your digital healthcare platform built to support secure access, communication, and appointment workflows in one experience.</p>
-            <div class="stack-row">
-              <span>Angular</span>
-              <span>TypeScript</span>
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>SQL</span>
-            </div>
-            <div class="project-links">
-              <a class="text-link" href="https://carewise-ivory.vercel.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
-            </div>
-          </div>
-        </article>
+    <section class="inner-section">
+      <div class="container">
+        <div class="concept-grid">
 
-        <article class="portfolio-entry">
-          <div class="portfolio-media">
-            <img class="portfolio-image" src="assets/image/Cropwiseproject.png" alt="CropWise farming assistant interface preview">
-          </div>
-          <div class="portfolio-copy">
-            <p class="project-tag">AI Farming Assistant</p>
-            <h2>CropWise</h2>
-            <p>AI-powered farming assistant that helps farmers with crop recommendations, yield predictions, and weather insights.</p>
-            <div class="stack-row">
-              <span>Angular</span>
-              <span>TypeScript</span>
-              <span>Node.js</span>
-              <span>Express</span>
-              <span>Supabase</span>
-              <span>AI Assistant</span>
+          <article class="concept-card">
+            <a class="concept-card-media" href="https://carewise-ivory.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View CareWise Health Platform">
+              <img src="assets/image/carewiseproject.png" alt="CareWise Health Platform interface preview" class="concept-card-image">
+              <div class="concept-card-overlay">
+                <span class="concept-card-visit">
+                  <i data-lucide="external-link"></i>
+                  View Live Site
+                </span>
+              </div>
+            </a>
+            <div class="concept-card-body">
+              <div class="concept-card-meta">
+                <span class="concept-tag">Healthcare Platform</span>
+              </div>
+              <h3>CareWise Health Platform</h3>
+              <p>A secure healthcare platform built to support appointments, communication and structured workflows in one clean experience.</p>
+              <div class="stack-row">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>SQL</span>
+              </div>
+              <a class="button button-primary concept-cta" href="https://carewise-ivory.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="external-link"></i>
+                <span>View Live Site</span>
+              </a>
             </div>
-            <div class="project-links">
-              <a class="text-link" href="https://cropwise-ai-six.vercel.app/" target="_blank" rel="noopener noreferrer">Live Site</a>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="portfolio-entry">
-          <div class="portfolio-media">
-            <img class="portfolio-image" src="assets/image/OptiHome.png" alt="OptiHome.AI brand preview">
-          </div>
-          <div class="portfolio-copy">
-            <p class="project-tag">Upcoming Project</p>
-            <h2>OptiHome.AI</h2>
-            <p>An AI-powered smart home energy platform that helps households understand electricity usage, analyze bill changes, and receive personalized energy-saving recommendations.</p>
-            <div class="stack-row">
-              <span>Upcoming Build</span>
-              <span>AI Insights</span>
-              <span>Energy Analytics</span>
-              <span>Smart Home Focus</span>
+          <article class="concept-card">
+            <a class="concept-card-media" href="https://cropwise-ai-six.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="View CropWise AI Farming Assistant">
+              <img src="assets/image/Cropwiseproject.png" alt="CropWise farming assistant interface preview" class="concept-card-image">
+              <div class="concept-card-overlay">
+                <span class="concept-card-visit">
+                  <i data-lucide="external-link"></i>
+                  View Live Site
+                </span>
+              </div>
+            </a>
+            <div class="concept-card-body">
+              <div class="concept-card-meta">
+                <span class="concept-tag">AI Farming Assistant</span>
+              </div>
+              <h3>CropWise</h3>
+              <p>An AI-powered farming assistant that supports crop recommendations, yield predictions and weather-aware decision making.</p>
+              <div class="stack-row">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>Supabase</span>
+                <span>AI Assistant</span>
+              </div>
+              <a class="button button-primary concept-cta" href="https://cropwise-ai-six.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="external-link"></i>
+                <span>View Live Site</span>
+              </a>
             </div>
-            <div class="project-links">
-              <span class="project-status">In development</span>
-              <a class="text-link" href="contact.html?type=project&amp;selected=OptiHome.AI">Ask About This Project</a>
+          </article>
+
+          <article class="concept-card">
+            <div class="concept-card-media concept-card-media--no-link">
+              <img src="assets/image/OptiHome.png" alt="OptiHome.AI brand preview" class="concept-card-image">
+              <div class="concept-card-overlay">
+                <span class="concept-card-visit">
+                  <i data-lucide="clock"></i>
+                  In Development
+                </span>
+              </div>
+            </div>
+            <div class="concept-card-body">
+              <div class="concept-card-meta">
+                <span class="concept-tag">Upcoming Project</span>
+                <span class="concept-badge">In Dev</span>
+              </div>
+              <h3>OptiHome.AI</h3>
+              <p>An AI-powered smart home energy platform that helps households understand electricity usage and receive personalized energy-saving recommendations.</p>
+              <div class="stack-row">
+                <span>Upcoming Build</span>
+                <span>AI Insights</span>
+                <span>Energy Analytics</span>
+                <span>Smart Home Focus</span>
+              </div>
+              <a class="button button-primary concept-cta" href="contact.html?type=project&amp;selected=OptiHome.AI">
+                <i data-lucide="message-circle"></i>
+                <span>Ask About This Project</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="inner-section concept-section">
+      <div class="container">
+        <div class="inner-section-heading concept-section-heading">
+          <p class="eyebrow">Concept Mockups</p>
+          <h2>Design concepts that explore real-world client scenarios.</h2>
+          <p>These are speculative builds and UI explorations crafted to demonstrate what a modern website could look like for a specific industry or business type.</p>
+        </div>
+        <div class="concept-grid">
+          <article class="concept-card">
+            <a class="concept-card-media" href="https://cozy-chat-site.lovable.app" target="_blank" rel="noopener noreferrer" aria-label="View HVAC Website Concept">
+              <img src="assets/image/hvacweb.png" alt="Modern HVAC Services Website Concept preview" class="concept-card-image">
+              <div class="concept-card-overlay">
+                <span class="concept-card-visit">
+                  <i data-lucide="external-link"></i>
+                  View Live Concept
+                </span>
+              </div>
+            </a>
+            <div class="concept-card-body">
+              <div class="concept-card-meta">
+                <span class="concept-tag">HVAC / Home Services</span>
+                <span class="concept-badge">Concept</span>
+              </div>
+              <h3>Modern HVAC Services Website Concept</h3>
+              <p>A modern, mobile-friendly HVAC website concept designed for heating, ventilation, and air conditioning service businesses. The project focuses on clean UI design, strong service presentation, responsive layouts, and streamlined customer contact flow.</p>
+              <a class="button button-primary concept-cta" href="https://cozy-chat-site.lovable.app" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="external-link"></i>
+                <span>View Live Concept</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inner-section inner-section-dark">
+      <div class="container">
+        <div class="inner-section-heading center">
+          <p class="eyebrow">What These Projects Show</p>
+          <h2>A balance of design, structure and real use-case thinking.</h2>
+        </div>
+        <div class="simple-feature-list">
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="layout-dashboard"></i></div>
+            <div>
+              <h3>Clear interfaces</h3>
+              <p>Every screen is shaped to reduce friction and improve usability.</p>
             </div>
           </div>
-        </article>
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="server-cog"></i></div>
+            <div>
+              <h3>Connected systems</h3>
+              <p>Projects are designed with both front-end experience and backend logic in mind.</p>
+            </div>
+          </div>
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="trending-up"></i></div>
+            <div>
+              <h3>Growth readiness</h3>
+              <p>The goal is always to create digital products that can support business growth over time.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+  <footer class="site-footer home-footer">
+    <div class="container home-footer-grid">
+      <div class="home-footer-brand-block">
+        <a class="brand brand--visual footer-brand" href="index.html" aria-label="PM Digital Solutions home">
+          <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+          <span class="site-brand-copy">
+            <span class="site-brand-name">PM DIGITAL</span>
+            <span class="site-brand-role">SOLUTIONS</span>
+          </span>
         </a>
-        <p>Clean, modern web solutions built to help businesses stand out and grow online.</p>
+        <p>Building digital experiences that drive real growth and measurable results.</p>
       </div>
-      <div>
-        <h3>Pages</h3>
-        <a href="about.html">About</a>
+      <div class="home-footer-column">
+        <h3>Let's Connect</h3>
+        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">(876) 820-5761</a>
+        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
+        <a href="https://pm-digital-solutions.vercel.app" target="_blank" rel="noopener noreferrer">pm-digital-solutions.vercel.app</a>
+      </div>
+      <div class="home-footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
-        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <span>St. Catherine, Jamaica</span>
+      <div class="home-footer-column home-footer-cta">
+        <h3>Let's Work Together</h3>
+        <p>Have a project in mind? Let's create something amazing together.</p>
+        <a class="button button-primary home-footer-button" href="contact.html">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
     </div>
-    <div class="container footer-bottom">
+    <div class="container footer-bottom home-footer-bottom">
       <p>&copy; <span id="year"></span> PM Digital Solutions. All rights reserved.</p>
     </div>
   </footer>

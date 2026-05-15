@@ -30,110 +30,136 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
-        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+<body class="inner-page services-page">
+  <header class="site-header home-site-header">
+    <div class="container nav-shell home-nav-shell shared-nav-shell">
+      <a class="brand brand--visual" href="index.html" aria-label="PM Digital Solutions home">
+        <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+        <span class="site-brand-copy">
+          <span class="site-brand-name">PM DIGITAL</span>
+          <span class="site-brand-role">SOLUTIONS</span>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="nav-toggle home-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" id="site-nav">
+      <nav class="site-nav home-site-nav" id="site-nav">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a class="is-active" href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb">
-              <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-              <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-            </span>
-          </span>
-          <span class="theme-toggle-label" data-theme-label aria-hidden="true"></span>
-        </button>
-        <a class="button button-primary nav-cta" href="contact.html">Get a Quote</a>
+        <a class="button button-primary nav-cta home-nav-cta" href="contact.html">
+          <span>Let's Work Together</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">Services & Packages</p>
-        <h1>Simple, professional website solutions for different stages of business</h1>
-        <p>From starter sites to more advanced custom builds, each package is designed to help your business show up clearly and confidently online.</p>
+  <main class="inner-main">
+    <section class="inner-hero">
+      <div class="container inner-hero-shell">
+        <div class="inner-hero-copy">
+          <p class="eyebrow">Services & Packages</p>
+          <h1>Professional web solutions built for different stages of growth.</h1>
+          <p>From starter websites to advanced custom builds, each package is designed to help your business show up clearly, build trust and perform online.</p>
+        </div>
+        <div class="inner-hero-panel">
+          <article class="inner-stat-card">
+            <strong>Built for service brands</strong>
+            <span>Ideal for professionals, agencies, founders and small businesses.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Flexible project scope</strong>
+            <span>From polished marketing sites to custom dashboards and portals.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Guided collaboration</strong>
+            <span>Clear communication, thoughtful feedback and a steady process.</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-vibrant service-overview">
-          <div class="container card-grid three-up spotlight-grid">
-        <article class="spotlight-card">
-          <div class="icon-badge accent"><i data-lucide="briefcase"></i></div>
-          <h3>Built for service brands</h3>
-          <p>Perfect for professionals, agencies, small businesses, and founders who need a stronger web presence.</p>
-        </article>
-        <article class="spotlight-card">
-          <div class="icon-badge accent"><i data-lucide="layout-dashboard"></i></div>
-          <h3>Flexible project scope</h3>
-          <p>From polished marketing sites to custom dashboards and portals, each package can expand around your goals.</p>
-        </article>
-        <article class="spotlight-card">
-          <div class="icon-badge accent"><i data-lucide="message-square"></i></div>
-          <h3>Guided collaboration</h3>
-          <p>You get clear communication, staged feedback, and a process that keeps the build moving with confidence.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="inner-section">
       <div class="container">
-        <div class="card-grid three-up pricing-grid">
-          <article class="pricing-card">
-            <p class="pricing-tier">Basic</p>
-            <div class="tier-icon"><i data-lucide="rocket"></i></div>
-            <h2>Perfect for getting started</h2>
-            <p>A strong option for smaller projects and personal brands that need a polished web presence.</p>
-            <ul class="check-list">
+        <div class="inner-section-heading">
+          <p class="eyebrow">Core Services</p>
+          <h2>Everything you need to build a strong digital presence.</h2>
+        </div>
+        <div class="inner-feature-grid inner-feature-grid-three">
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-green"><i data-lucide="monitor-smartphone"></i></div>
+            <h3>Responsive Website Design</h3>
+            <p>Layouts and systems built to feel sharp, fast and consistent across every device.</p>
+          </article>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-blue"><i data-lucide="layout-panel-top"></i></div>
+            <h3>Landing Pages & Funnels</h3>
+            <p>High-converting pages that support promotions, launches, offers and lead generation.</p>
+          </article>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-purple"><i data-lucide="database"></i></div>
+            <h3>Custom Features</h3>
+            <p>Booking flows, lead systems, dashboards and integrations tailored to your workflow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="inner-section inner-section-dark">
+      <div class="container">
+        <div class="inner-section-heading center">
+          <p class="eyebrow">Website Packages</p>
+          <h2>Choose the package that matches your current stage.</h2>
+        </div>
+        <div class="inner-package-grid">
+          <article class="inner-package-card">
+            <p class="inner-package-tier">Basic</p>
+            <div class="inner-card-icon inner-card-icon-green"><i data-lucide="rocket"></i></div>
+            <h3>Perfect for getting started</h3>
+            <p>A polished entry package for smaller brands and businesses needing a strong first impression.</p>
+            <ul class="inner-check-list">
               <li>Up to 5 pages</li>
               <li>Basic SEO setup</li>
               <li>Contact form</li>
-              <li>Mobile optimised</li>
+              <li>Mobile optimized</li>
               <li>1 revision round</li>
               <li>Delivery: 2 to 5 days</li>
             </ul>
-            <strong class="price">JMD $30,000 - $60,000</strong>
-            <a class="button button-secondary button-package full-width" href="contact.html?type=package&amp;selected=Basic%20Package">Get Started</a>
+            <strong class="inner-price">JMD $30,000 - $60,000</strong>
+            <a class="button button-primary full-width" href="contact.html?type=package&amp;selected=Basic%20Package">Get Started</a>
           </article>
-          <article class="pricing-card featured-tier">
-            <p class="pricing-tier">Business</p>
-            <div class="tier-icon"><i data-lucide="briefcase"></i></div>
-            <h2>Best for growing businesses</h2>
-            <p>Everything needed for a professional site that builds credibility and supports growth.</p>
-            <ul class="check-list">
+
+          <article class="inner-package-card inner-package-card-featured">
+            <p class="inner-package-tier">Business</p>
+            <div class="inner-card-icon inner-card-icon-blue"><i data-lucide="briefcase"></i></div>
+            <h3>Best for growing businesses</h3>
+            <p>A stronger package for businesses that need credibility, custom structure and more growth support.</p>
+            <ul class="inner-check-list">
               <li>Up to 10 pages</li>
               <li>Custom layout and design</li>
-              <li>SEO optimised</li>
+              <li>SEO optimized</li>
               <li>Contact form</li>
-              <li>Mobile optimised</li>
+              <li>Mobile optimized</li>
               <li>2 to 3 revision rounds</li>
               <li>Delivery: 5 to 10 days</li>
             </ul>
-            <strong class="price">JMD $80,000 - $150,000</strong>
-            <a class="button button-primary button-package full-width" href="contact.html?type=package&amp;selected=Business%20Package">Most Popular</a>
+            <strong class="inner-price">JMD $80,000 - $150,000</strong>
+            <a class="button button-primary full-width" href="contact.html?type=package&amp;selected=Business%20Package">Most Popular</a>
           </article>
-          <article class="pricing-card">
-            <p class="pricing-tier">Custom</p>
-            <div class="tier-icon"><i data-lucide="cpu"></i></div>
-            <h2>For advanced or unique projects</h2>
-            <p>Tailored builds for businesses that need more complex features and deeper functionality.</p>
-            <ul class="check-list">
+
+          <article class="inner-package-card">
+            <p class="inner-package-tier">Custom</p>
+            <div class="inner-card-icon inner-card-icon-purple"><i data-lucide="cpu"></i></div>
+            <h3>For advanced or unique projects</h3>
+            <p>Tailored builds for businesses that need more complex features, deeper functionality and scale.</p>
+            <ul class="inner-check-list">
               <li>User authentication</li>
               <li>Dashboard interfaces</li>
               <li>Database integration</li>
@@ -142,56 +168,53 @@
               <li>Multiple revisions</li>
               <li>Delivery: 2 to 6 weeks</li>
             </ul>
-            <strong class="price">Starting JMD $180,000+</strong>
-            <a class="button button-secondary button-package full-width" href="contact.html?type=package&amp;selected=Custom%20Package">Contact Us</a>
+            <strong class="inner-price">Starting JMD $180,000+</strong>
+            <a class="button button-primary full-width" href="contact.html?type=package&amp;selected=Custom%20Package">Contact Us</a>
           </article>
         </div>
-        <a class="scroll-cue" href="#add-ons" aria-label="Scroll down to additional services">
-          <span></span>
-        </a>
       </div>
     </section>
 
-    <section class="section section-alt" id="add-ons">
+    <section class="inner-section">
       <div class="container">
-        <div class="section-heading">
+        <div class="inner-section-heading">
           <p class="eyebrow">Additional Services</p>
-          <h2>Add-ons for brands that need more</h2>
+          <h2>Add-ons for brands that need more support.</h2>
         </div>
-        <div class="card-grid add-on-grid">
-          <article class="feature-card">
-            <div class="icon-badge accent small"><i data-lucide="pen-tool"></i></div>
+        <div class="inner-feature-grid inner-feature-grid-three">
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-orange"><i data-lucide="pen-tool"></i></div>
             <h3>Logo Design</h3>
             <p>Professional logo concepts that support a stronger brand identity.</p>
             <strong>JMD $10,000 - $25,000</strong>
           </article>
-          <article class="feature-card">
-            <div class="icon-badge accent small"><i data-lucide="file-text"></i></div>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-blue"><i data-lucide="file-text"></i></div>
             <h3>Content Writing</h3>
             <p>Clear web copy that helps visitors understand and trust your offer.</p>
             <strong>JMD $5,000 - $15,000 per page</strong>
           </article>
-          <article class="feature-card">
-            <div class="icon-badge accent small"><i data-lucide="search"></i></div>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-green"><i data-lucide="search"></i></div>
             <h3>Advanced SEO</h3>
-            <p>Extra on-page improvements to support visibility and better search performance.</p>
+            <p>Extra on-page improvements to support visibility and stronger search performance.</p>
             <strong>JMD $20,000 - $80,000+</strong>
           </article>
-          <article class="feature-card">
-            <div class="icon-badge accent small"><i data-lucide="plus-square"></i></div>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-purple"><i data-lucide="plus-square"></i></div>
             <h3>Extra Pages</h3>
-            <p>Additional pages for expanded services, landing campaigns, or detailed content.</p>
+            <p>Additional pages for expanded services, landing campaigns or more detailed content.</p>
             <strong>JMD $5,000 - $15,000 per page</strong>
           </article>
-          <article class="feature-card">
-            <div class="icon-badge accent small"><i data-lucide="shield"></i></div>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-green"><i data-lucide="shield"></i></div>
             <h3>Maintenance Plan</h3>
-            <p>Ongoing support to keep your website secure, updated, and running smoothly.</p>
+            <p>Ongoing support to keep your website secure, updated and running smoothly.</p>
             <strong>JMD $5,000 - $20,000+ per month</strong>
           </article>
-          <article class="feature-card">
-            <div class="icon-badge accent small"><i data-lucide="globe"></i></div>
-            <h3>Domain & Hosting Setup</h3>
+          <article class="inner-light-card">
+            <div class="inner-card-icon inner-card-icon-orange"><i data-lucide="globe"></i></div>
+            <h3>Domain &amp; Hosting Setup</h3>
             <p>Technical setup assistance for launch readiness and a smoother handoff.</p>
             <strong>JMD $6,000+ one-time setup</strong>
           </article>
@@ -199,55 +222,76 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container note-panel-grid">
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="server"></i></div>
-          <h3>Domain & Hosting</h3>
+    <section class="inner-section">
+      <div class="container inner-policy-list">
+        <div class="inner-policy-row">
+          <div class="inner-policy-key">
+            <i data-lucide="server"></i>
+            <h3>Domain &amp; Hosting</h3>
+          </div>
           <p>Domain and hosting are not included in website packages unless arranged separately.</p>
-        </article>
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="receipt"></i></div>
-          <h3>Payment Terms</h3>
+        </div>
+        <div class="inner-policy-row">
+          <div class="inner-policy-key">
+            <i data-lucide="receipt"></i>
+            <h3>Payment Terms</h3>
+          </div>
           <p>A 50% deposit is required to begin. The remaining balance is due before final delivery or launch.</p>
-        </article>
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="clock-3"></i></div>
-          <h3>Timelines</h3>
-          <p>Delivery timelines vary depending on project scope, revisions, and client responsiveness.</p>
-        </article>
-        <article class="note-panel">
-          <div class="icon-badge accent small"><i data-lucide="info"></i></div>
-          <h3>Final Note</h3>
-          <p>Final pricing may vary depending on features, integrations, and overall project complexity.</p>
-        </article>
+        </div>
+        <div class="inner-policy-row">
+          <div class="inner-policy-key">
+            <i data-lucide="clock-3"></i>
+            <h3>Timelines</h3>
+          </div>
+          <p>Delivery timelines vary depending on project scope, revisions and client responsiveness.</p>
+        </div>
+        <div class="inner-policy-row">
+          <div class="inner-policy-key">
+            <i data-lucide="info"></i>
+            <h3>Final Note</h3>
+          </div>
+          <p>Final pricing may vary depending on features, integrations and overall project complexity.</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+  <footer class="site-footer home-footer">
+    <div class="container home-footer-grid">
+      <div class="home-footer-brand-block">
+        <a class="brand brand--visual footer-brand" href="index.html" aria-label="PM Digital Solutions home">
+          <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+          <span class="site-brand-copy">
+            <span class="site-brand-name">PM DIGITAL</span>
+            <span class="site-brand-role">SOLUTIONS</span>
+          </span>
         </a>
-        <p>Clean, modern web solutions built to help businesses stand out and grow online.</p>
+        <p>Building digital experiences that drive real growth and measurable results.</p>
       </div>
-      <div>
-        <h3>Pages</h3>
-        <a href="about.html">About</a>
+      <div class="home-footer-column">
+        <h3>Let's Connect</h3>
+        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">(876) 820-5761</a>
+        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
+        <a href="https://pm-digital-solutions.vercel.app" target="_blank" rel="noopener noreferrer">pm-digital-solutions.vercel.app</a>
+      </div>
+      <div class="home-footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
-        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <span>St. Catherine, Jamaica</span>
+      <div class="home-footer-column home-footer-cta">
+        <h3>Let's Work Together</h3>
+        <p>Have a project in mind? Let's create something amazing together.</p>
+        <a class="button button-primary home-footer-button" href="contact.html">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
     </div>
-    <div class="container footer-bottom">
+    <div class="container footer-bottom home-footer-bottom">
       <p>&copy; <span id="year"></span> PM Digital Solutions. All rights reserved.</p>
     </div>
   </footer>

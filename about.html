@@ -30,128 +30,135 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container nav-shell">
-      <a class="brand" href="index.html" aria-label="PM Digital Solutions home">
-        <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+<body class="inner-page about-page">
+  <header class="site-header home-site-header">
+    <div class="container nav-shell home-nav-shell shared-nav-shell">
+      <a class="brand brand--visual" href="index.html" aria-label="PM Digital Solutions home">
+        <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+        <span class="site-brand-copy">
+          <span class="site-brand-name">PM DIGITAL</span>
+          <span class="site-brand-role">SOLUTIONS</span>
+        </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <button class="nav-toggle home-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" id="site-nav">
+      <nav class="site-nav home-site-nav" id="site-nav">
         <a href="index.html">Home</a>
-        <a class="is-active" href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a class="is-active" href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <button class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false">
-          <span class="theme-toggle-track" aria-hidden="true">
-            <span class="theme-toggle-thumb">
-              <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
-              <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
-            </span>
-          </span>
-          <span class="theme-toggle-label" data-theme-label aria-hidden="true"></span>
-        </button>
-        <a class="button button-primary nav-cta" href="contact.html">Get a Quote</a>
+        <a class="button button-primary nav-cta home-nav-cta" href="contact.html">
+          <span>Let's Work Together</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">About</p>
-        <h1>Building websites with clarity, purpose, and quality</h1>
-        <p>Hi, I'm Prince-Mark, a web developer focused on building clean, modern websites that help businesses grow and stand out online.</p>
+  <main class="inner-main">
+    <section class="inner-hero">
+      <div class="container inner-hero-shell">
+        <div class="inner-hero-copy">
+          <p class="eyebrow">About PM Digital Solutions</p>
+          <h1>Designing websites with clarity, strategy and business focus.</h1>
+          <p>I'm Prince-Mark, the developer behind PM Digital Solutions. I build modern digital experiences that help businesses communicate clearly, look professional and convert attention into action.</p>
+        </div>
+        <div class="inner-hero-panel">
+          <article class="inner-stat-card">
+            <strong>Modern UI</strong>
+            <span>Clean visuals shaped to build trust fast.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Responsive</strong>
+            <span>Built to look strong across mobile, tablet and desktop.</span>
+          </article>
+          <article class="inner-stat-card">
+            <strong>Reliable Delivery</strong>
+            <span>Focused on practical execution and long-term support.</span>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container about-grid">
-        <div class="profile-panel">
-          <img class="profile-image" src="assets/image/profile.png" alt="Portrait of Prince-Mark">
+    <section class="inner-section">
+      <div class="container inner-profile-grid">
+        <div class="inner-profile-card">
+          <img class="inner-profile-image" src="assets/image/profile.png" alt="Portrait of Prince-Mark">
         </div>
-        <div class="about-copy">
+        <div class="inner-content-card">
           <p class="eyebrow">Introduction</p>
-          <h2>Modern websites that look sharp and perform well</h2>
-          <p>I specialize in designing and developing responsive websites using modern technologies, ensuring your site looks great and performs well across all devices.</p>
-          <div class="inline-stats">
-            <article>
-              <div class="stat-icon"><i data-lucide="sparkles"></i></div>
-              <strong>Modern</strong>
-              <span>Design-forward websites</span>
-            </article>
-            <article>
-              <div class="stat-icon"><i data-lucide="monitor-smartphone"></i></div>
-              <strong>Responsive</strong>
-              <span>Built for every device</span>
-            </article>
-            <article>
-              <div class="stat-icon"><i data-lucide="shield-check"></i></div>
-              <strong>Reliable</strong>
-              <span>Focused on delivery and support</span>
-            </article>
+          <h2>Modern websites that look sharp and perform well.</h2>
+          <p>I specialize in designing and developing responsive websites using modern tools and clean front-end systems, making sure every project feels polished, fast and easy to use.</p>
+          <div class="inner-pill-grid">
+            <span>Design-forward interfaces</span>
+            <span>Responsive by default</span>
+            <span>Business-minded execution</span>
+            <span>Support after launch</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="inner-section inner-section-dark">
       <div class="container">
-        <div class="section-heading">
+        <div class="inner-section-heading center">
           <p class="eyebrow">My Approach</p>
-          <h2>A practical process built around client goals</h2>
+          <h2>A practical process built around real client goals.</h2>
         </div>
-        <div class="timeline-grid">
-          <article class="process-card">
-            <div class="icon-badge accent"><i data-lucide="target"></i></div>
-            <span>01</span>
-            <h3>Understand client goals</h3>
-            <p>I start by understanding what success looks like for your business and your audience.</p>
-          </article>
-          <article class="process-card">
-            <div class="icon-badge accent"><i data-lucide="pen-tool"></i></div>
-            <span>02</span>
-            <h3>Design with purpose</h3>
-            <p>Each page is structured to support trust, readability, and clear next steps.</p>
-          </article>
-          <article class="process-card">
-            <div class="icon-badge accent"><i data-lucide="code-xml"></i></div>
-            <span>03</span>
-            <h3>Build with clean code</h3>
-            <p>I focus on maintainable front-end structure and responsive performance.</p>
-          </article>
-          <article class="process-card">
-            <div class="icon-badge accent"><i data-lucide="rocket"></i></div>
-            <span>04</span>
-            <h3>Deliver with quality</h3>
-            <p>The final product is refined, professional, and ready to support your brand online.</p>
-          </article>
+        <div class="simple-feature-list">
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="target"></i></div>
+            <div>
+              <h3>Understand client goals</h3>
+              <p>I start by understanding what success looks like for your business and your audience.</p>
+            </div>
+          </div>
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="pen-tool"></i></div>
+            <div>
+              <h3>Design with purpose</h3>
+              <p>Each page is structured to support trust, readability and clear next steps.</p>
+            </div>
+          </div>
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="code-2"></i></div>
+            <div>
+              <h3>Build with clean code</h3>
+              <p>I focus on maintainable front-end structure and responsive performance.</p>
+            </div>
+          </div>
+          <div class="simple-feature-item">
+            <div class="simple-feature-icon"><i data-lucide="rocket"></i></div>
+            <div>
+              <h3>Deliver with quality</h3>
+              <p>The final product is refined, professional and ready to support your brand online.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-column-copy">
-        <article>
+    <section class="inner-section">
+      <div class="container inner-dual-grid">
+        <article class="inner-content-card">
           <p class="eyebrow">Why Choose Me</p>
-          <h2>Trust built through communication and results</h2>
-          <ul class="check-list">
+          <h2>Trust built through communication and results.</h2>
+          <ul class="inner-check-list">
             <li>Clear communication from start to finish</li>
             <li>Reliable delivery and a focused process</li>
-            <li>Attention to results, not just appearance</li>
+            <li>Attention to business impact, not just appearance</li>
             <li>Willingness to adapt to client needs and feedback</li>
           </ul>
         </article>
-        <article>
+        <article class="inner-content-card">
           <p class="eyebrow">Personal Direction</p>
-          <h2>Growing through tech, design, and AI</h2>
+          <h2>Growing through tech, design and AI.</h2>
           <p>My journey in web development is driven by a genuine interest in technology and problem-solving. I enjoy combining clean design with practical functionality, and I'm especially interested in how modern tools, including AI, can help businesses work smarter and communicate better online.</p>
           <p>Long term, my vision is to keep building strong digital experiences that help local and global brands grow with confidence.</p>
         </article>
@@ -159,29 +166,42 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="assets/image/Logo.svg" alt="PM Digital Solutions logo">
+  <footer class="site-footer home-footer">
+    <div class="container home-footer-grid">
+      <div class="home-footer-brand-block">
+        <a class="brand brand--visual footer-brand" href="index.html" aria-label="PM Digital Solutions home">
+          <img class="site-brand-image" src="assets/image/newlogo.png" alt="PM Digital Solutions logo">
+          <span class="site-brand-copy">
+            <span class="site-brand-name">PM DIGITAL</span>
+            <span class="site-brand-role">SOLUTIONS</span>
+          </span>
         </a>
-        <p>Clean, modern web solutions built to help businesses stand out and grow online.</p>
+        <p>Building digital experiences that drive real growth and measurable results.</p>
       </div>
-      <div>
-        <h3>Pages</h3>
-        <a href="about.html">About</a>
+      <div class="home-footer-column">
+        <h3>Let's Connect</h3>
+        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">(876) 820-5761</a>
+        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
+        <a href="https://pm-digital-solutions.vercel.app" target="_blank" rel="noopener noreferrer">pm-digital-solutions.vercel.app</a>
+      </div>
+      <div class="home-footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div>
-        <h3>Contact</h3>
-        <a href="mailto:princesteele23@gmail.com">princesteele23@gmail.com</a>
-        <a href="https://wa.me/18768205761" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <span>St. Catherine, Jamaica</span>
+      <div class="home-footer-column home-footer-cta">
+        <h3>Let's Work Together</h3>
+        <p>Have a project in mind? Let's create something amazing together.</p>
+        <a class="button button-primary home-footer-button" href="contact.html">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-right"></i>
+        </a>
       </div>
     </div>
-    <div class="container footer-bottom">
+    <div class="container footer-bottom home-footer-bottom">
       <p>&copy; <span id="year"></span> PM Digital Solutions. All rights reserved.</p>
     </div>
   </footer>
