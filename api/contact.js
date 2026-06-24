@@ -31,7 +31,7 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
 
   return `
     <div style="display:none; max-height:0; overflow:hidden; opacity:0; color:transparent;">
-      New inquiry from ${safeName} for PM Digital Solutions.
+      New inquiry from ${safeName} for PMS Digital Solutions.
     </div>
     <style>
       .email-columns { display:block; }
@@ -92,7 +92,7 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
       <div style="max-width:720px; margin:0 auto;">
         <div style="margin-bottom:16px; text-align:center;">
           <span style="display:inline-block; padding:8px 14px; border-radius:999px; background:#ffffff; border:1px solid #d8e4ef; color:#58708c; font-size:11px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase;">
-            PM Digital Solutions
+            PMS Digital Solutions
           </span>
         </div>
 
@@ -111,7 +111,7 @@ function buildHtml({ name, email, message, selectedItem, selectedType }) {
                   <p style="margin:0 0 10px; font-size:12px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#62809d;">New website inquiry</p>
                   <h1 class="email-title" style="margin:0 0 12px; font-size:30px; line-height:1.16; color:#102739;">${safeName} just contacted you</h1>
                   <p class="email-summary" style="margin:0; font-size:15px; line-height:1.7; color:#56708b;">
-                    A new message was sent through your PM Digital Solutions contact form.
+                    A new message was sent through your PMS Digital Solutions contact form.
                   </p>
                 </td>
                 <td class="email-badge-wrap" style="width:170px; padding:0; vertical-align:top; text-align:right;">
@@ -176,7 +176,7 @@ function buildText({ name, email, message, selectedItem, selectedType }) {
   });
 
   return [
-    "New PM Digital Solutions Website Inquiry",
+    "New PMS Digital Solutions Website Inquiry",
     "",
     `Name: ${name}`,
     `Email: ${email}`,
@@ -215,7 +215,7 @@ module.exports = async function handler(req, res) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: process.env.RESEND_FROM_EMAIL || "PM Digital Solutions <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_EMAIL || "PMS Digital Solutions <onboarding@resend.dev>",
       to: [process.env.CONTACT_EMAIL || CONTACT_EMAIL],
       reply_to: email,
       subject: `New website inquiry from ${name}${subjectSuffix}`,
