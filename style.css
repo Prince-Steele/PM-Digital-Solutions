@@ -4059,6 +4059,21 @@ body.inner-page::after,
   font-size: 1rem;
 }
 
+.inner-package-note {
+  margin: -0.4rem 0 1.1rem;
+  color: rgba(231, 240, 246, 0.62);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.inner-package-section-note {
+  margin: 1.1rem 0 0;
+  max-width: 760px;
+  color: rgba(231, 240, 246, 0.72);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
 .inner-policy-list {
   border-radius: 1.6rem;
   background: #ffffff;
