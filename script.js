@@ -65,6 +65,43 @@ if (themeToggle) {
   });
 }
 
+const floatingServicesMenus = document.querySelectorAll("[data-services-menu]");
+
+floatingServicesMenus.forEach((menu) => {
+  const trigger = menu.querySelector(".floating-services-trigger");
+  const links = menu.querySelectorAll(".floating-services-dropdown a");
+
+  if (!trigger) {
+    return;
+  }
+
+  const setMenuOpen = (isOpen) => {
+    menu.classList.toggle("is-open", isOpen);
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  trigger.addEventListener("click", () => {
+    setMenuOpen(trigger.getAttribute("aria-expanded") !== "true");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && trigger.getAttribute("aria-expanded") === "true") {
+      setMenuOpen(false);
+      trigger.focus();
+    }
+  });
+});
+
 if (window.lucide) {
   window.lucide.createIcons();
 }
@@ -73,6 +110,77 @@ const yearTarget = document.querySelectorAll("#year");
 yearTarget.forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
+
+const currencySelect = document.querySelector("[data-currency-select]");
+const currencyStatus = document.querySelector("[data-currency-status]");
+const convertiblePrices = document.querySelectorAll("[data-price-min]");
+const CURRENCY_STORAGE_KEY = "preferred-currency";
+const currencyOptions = {
+  JMD: { label: "Jamaican dollars", symbol: "JMD $", rate: 1, rounding: 1 },
+  USD: { label: "US dollars", symbol: "US$", rate: 190 / 30000, rounding: 1 },
+  EUR: { label: "euros", symbol: "€", rate: 0.00545, rounding: 1 },
+  GBP: { label: "British pounds", symbol: "£", rate: 0.0047, rounding: 1 },
+  JPY: { label: "Japanese yen", symbol: "¥", rate: 0.93, rounding: 100 },
+  INR: { label: "Indian rupees", symbol: "₹", rate: 0.552, rounding: 100 },
+};
+
+const formatConvertedAmount = (amount, currency) => {
+  const { rate, rounding, symbol } = currencyOptions[currency];
+  const convertedAmount = amount * rate;
+  const roundedAmount = Math.round(convertedAmount / rounding) * rounding;
+  return `${symbol}${roundedAmount.toLocaleString("en-US")}`;
+};
+
+const updateDisplayedCurrency = (currency, persist = true) => {
+  const selectedCurrency = currencyOptions[currency] ? currency : "JMD";
+
+  convertiblePrices.forEach((price) => {
+    const minimum = Number(price.dataset.priceMin);
+    const maximum = price.dataset.priceMax ? Number(price.dataset.priceMax) : null;
+    const prefix = price.dataset.pricePrefix || "";
+    const suffix = price.dataset.priceSuffix || "";
+    const plus = price.dataset.pricePlus === "true" ? "+" : "";
+    const minimumLabel = formatConvertedAmount(minimum, selectedCurrency);
+    const rangeLabel = maximum
+      ? `${minimumLabel} - ${formatConvertedAmount(maximum, selectedCurrency)}`
+      : `${minimumLabel}${plus}`;
+
+    price.textContent = `${prefix}${rangeLabel}${suffix}`;
+  });
+
+  if (currencyStatus) {
+    currencyStatus.textContent = selectedCurrency === "JMD"
+      ? "Prices shown in Jamaican dollars."
+      : `Approximate prices shown in ${currencyOptions[selectedCurrency].label}.`;
+  }
+
+  if (currencySelect) {
+    currencySelect.value = selectedCurrency;
+  }
+
+  if (persist) {
+    try {
+      localStorage.setItem(CURRENCY_STORAGE_KEY, selectedCurrency);
+    } catch {
+      // Keep the selected currency active if browser storage is unavailable.
+    }
+  }
+};
+
+if (currencySelect && convertiblePrices.length) {
+  let savedCurrency = "JMD";
+
+  try {
+    savedCurrency = localStorage.getItem(CURRENCY_STORAGE_KEY) || "JMD";
+  } catch {
+    // Use Jamaican dollars when browser storage is unavailable.
+  }
+
+  updateDisplayedCurrency(savedCurrency, false);
+  currencySelect.addEventListener("change", (event) => {
+    updateDisplayedCurrency(event.target.value);
+  });
+}
 
 const queryParams = new URLSearchParams(window.location.search);
 const selectedType = queryParams.get("type");
