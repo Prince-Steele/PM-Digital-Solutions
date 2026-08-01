@@ -5,6 +5,15 @@ const themeToggle = document.querySelector(".theme-toggle");
 const themeToggleLabel = document.querySelector("[data-theme-label]");
 const THEME_STORAGE_KEY = "theme";
 
+const serviceAnnouncement = document.querySelector("[data-service-announcement]");
+const serviceAnnouncementClose = document.querySelector("[data-service-announcement-close]");
+
+if (serviceAnnouncement && serviceAnnouncementClose) {
+  serviceAnnouncementClose.addEventListener("click", () => {
+    serviceAnnouncement.hidden = true;
+  });
+}
+
 const getPreferredTheme = () => {
   try {
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
