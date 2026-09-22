@@ -3,7 +3,7 @@ import react from "eslint-plugin-react";
 import globals from "globals";
 
 export default [
-  { ignores: ["dist/**", "node_modules/**", "showcase/**", "test-results/**"] },
+  { ignores: [".pms-repo/**", "dist/**", "node_modules/**", "showcase/**", "test-results/**"] },
   js.configs.recommended,
   {
     files: ["**/*.{js,jsx,mjs}"],
