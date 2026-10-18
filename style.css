@@ -3588,9 +3588,8 @@ body.home-page::after,
 .site-brand-image {
   width: 72px;
   height: 72px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+  object-fit: contain;
+  border-radius: 0;
   flex: 0 0 auto;
 }
 
@@ -5837,4 +5836,14 @@ body.inner-page::after,
   .floating-services-dropdown {
     transition: none;
   }
+}
+
+/* Keep complete homepage snapshots visible in their portfolio cards. */
+.concept-card-image--snapshot {
+  object-fit: contain;
+  background: #111415;
+}
+
+.concept-card-media:hover .concept-card-image--snapshot {
+  transform: none;
 }
