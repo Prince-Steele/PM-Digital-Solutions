@@ -1,67 +1,38 @@
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
-const root = document.documentElement;
-const themeToggle = document.querySelector(".theme-toggle");
-const themeToggleLabel = document.querySelector("[data-theme-label]");
-const THEME_STORAGE_KEY = "theme";
-
-const getPreferredTheme = () => {
-  try {
-    const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
-    if (storedTheme === "light" || storedTheme === "dark") {
-      return storedTheme;
-    }
-  } catch {
-    // Ignore storage failures and fall back to the system preference below.
-  }
-
-  return window.matchMedia?.("(prefers-color-scheme: light)").matches ? "light" : "dark";
-};
-
-const applyTheme = (theme, persist = true) => {
-  root.setAttribute("data-theme", theme);
-  root.style.colorScheme = theme;
-
-  if (persist) {
-    try {
-      localStorage.setItem(THEME_STORAGE_KEY, theme);
-    } catch {
-      // Ignore storage failures and keep the active theme in memory.
-    }
-  }
-
-  if (themeToggle) {
-    const isLightTheme = theme === "light";
-    themeToggle.setAttribute("aria-pressed", String(isLightTheme));
-    themeToggle.setAttribute("aria-label", isLightTheme ? "Switch to dark mode" : "Switch to light mode");
-  }
-
-  if (themeToggleLabel) {
-    themeToggleLabel.setAttribute("data-mode", theme === "light" ? "Light" : "Dark");
-  }
-};
-
-applyTheme(getPreferredTheme(), false);
-
 if (navToggle && siteNav) {
+  const setNavigationOpen = (isOpen) => {
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+    siteNav.classList.toggle("is-open", isOpen);
+  };
+
   navToggle.addEventListener("click", () => {
     const expanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", String(!expanded));
-    siteNav.classList.toggle("is-open");
+    setNavigationOpen(!expanded);
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      navToggle.setAttribute("aria-expanded", "false");
-      siteNav.classList.remove("is-open");
+      setNavigationOpen(false);
     });
   });
-}
 
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    applyTheme(nextTheme);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+      setNavigationOpen(false);
+      navToggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!siteNav.contains(event.target) && !navToggle.contains(event.target)) {
+      setNavigationOpen(false);
+    }
+  });
+
+  window.matchMedia("(min-width: 1025px)").addEventListener("change", () => {
+    setNavigationOpen(false);
   });
 }
 
@@ -101,10 +72,6 @@ floatingServicesMenus.forEach((menu) => {
     }
   });
 });
-
-if (window.lucide) {
-  window.lucide.createIcons();
-}
 
 const yearTarget = document.querySelectorAll("#year");
 yearTarget.forEach((node) => {

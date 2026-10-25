@@ -3,3 +3,4 @@
 resend.env
 .vercel/
 node_modules/
+.local/
